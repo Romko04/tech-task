@@ -1,0 +1,603 @@
+@charset "UTF-8";
+/*Обнулення*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  line-height: 1;
+  height: 100vh;
+  font-family: "Unbounded", cursive;
+  background-color: #fff;
+}
+
+.wrapper {
+  position: relative;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+:focus {
+  outline: 0;
+}
+
+ins {
+  text-decoration: none;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Hind";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/Hind-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Hind";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/Hind-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Hind";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/Hind-Regular.otf") format("otf");
+}
+@font-face {
+  font-family: "Proxima Nova";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/Proxima-NovaRegular.woff") format("woff");
+}
+@font-face {
+  font-family: "Proxima Nova";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/Proxima-NovaRegular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Proxima Nova";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/Proxima-NovaRegular.otf") format("otf");
+}
+@font-face {
+  font-family: "Overpass";
+  font-weight: 600;
+  font-style: normal;
+  src: url("../fonts/Overpass-SemiBold.woff") format("woff");
+}
+@font-face {
+  font-family: "Overpass";
+  font-weight: 600;
+  font-style: normal;
+  src: url("../fonts/Overpass-SemiBold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Overpass";
+  font-weight: 600;
+  font-style: normal;
+  src: url("../fonts/Overpass-SemiBold.otf") format("otf");
+}
+@font-face {
+  font-family: "Hind";
+  font-weight: 300;
+  font-style: normal;
+  src: url("../fonts/Hind-Light.woff") format("woff");
+}
+@font-face {
+  font-family: "Hind";
+  font-weight: 300;
+  font-style: normal;
+  src: url("../fonts/Hind-Light.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Hind";
+  font-weight: 300;
+  font-style: normal;
+  src: url("../fonts/Hind-Light.otf") format("otf");
+}
+@font-face {
+  font-family: "Overpass";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../fonts/Overpass-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "Overpass";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../fonts/Overpass-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Overpass";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../fonts/Overpass-Bold.otf") format("otf");
+}
+body {
+  font-family: "Hind", sans-serif;
+  line-height: 1;
+  height: 100vh;
+}
+
+html {
+  font-size: calc(100vw / 1920 * 10);
+}
+@media (max-width: 1024px) {
+  html {
+    font-size: calc(100vw / 360 * 10);
+  }
+}
+
+.container {
+  max-width: 192rem;
+  padding: 8rem;
+  position: relative;
+  z-index: 2;
+}
+@media (max-width: 1024px) {
+  .container {
+    padding: 1.5rem;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.erorr-span {
+  font-family: "Proxima Nova", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 160%;
+  color: #ba5b5b;
+}
+
+.form__wrapper-title {
+  font-family: "Overpass", sans-serif;
+  font-weight: 700;
+  font-size: 9.6rem;
+  max-width: 101rem;
+  line-height: 110%;
+  color: #8b96ac;
+}
+@media (max-width: 1024px) {
+  .form__wrapper-title {
+    font-size: 3.6rem;
+  }
+}
+.form__wrapper-title span {
+  color: #2a3b53;
+}
+.form__wrapper-subtitle {
+  font-family: "Hind", sans-serif;
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 100%;
+  color: #8b96ac;
+}
+@media (max-width: 1024px) {
+  .form__wrapper-subtitle {
+    font-size: 2rem;
+  }
+}
+.form__wrapper {
+  text-align: left;
+}
+.form form {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 56rem;
+}
+@media (max-width: 1024px) {
+  .form form {
+    width: 100%;
+    gap: 1rem;
+  }
+}
+.form__input {
+  border: transparent;
+  position: relative;
+  -webkit-appearance: none;
+  border-radius: 0;
+  padding: 1.2rem 7rem 1.2rem 2rem;
+  width: 100%;
+  font-family: "Hind", sans-serif;
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #2a3b53;
+}
+@media (max-width: 1024px) {
+  .form__input {
+    padding: 1rem 7rem 1rem 2rem;
+    font-size: 2rem;
+  }
+}
+.form__input ::-moz-placeholder {
+  font-family: "Hind", sans-serif;
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #8b96ac;
+}
+.form__input ::placeholder {
+  font-family: "Hind", sans-serif;
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #8b96ac;
+}
+.form__input-container::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 0.1rem;
+  background-color: #5b6c8c;
+}
+.form__input-container.error-input::after {
+  background-color: #ba5b5b;
+}
+.form__input-container {
+  position: relative;
+}
+.form__input-wrapper {
+  width: 56rem;
+}
+@media (max-width: 1024px) {
+  .form__input-wrapper {
+    width: 100%;
+  }
+}
+.form__input-wrapper p {
+  font-family: "Proxima Nova", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 160%;
+  color: #ba5b5b;
+}
+.form__input-wrapper input[type=password]::-ms-reveal,
+.form__input-wrapper input[type=password]::-webkit-credentials-auto-fill-button,
+.form__input-wrapper input[type=password]::-webkit-reveal {
+  display: none;
+}
+.form__input-wrapper--checbox {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+@media (max-width: 1024px) {
+  .form__input-wrapper--checbox {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+.form__input--checbox {
+  display: inline-block;
+}
+.form .icon--arrow {
+  position: absolute;
+  right: 2rem;
+  top: 1.7rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  transform: rotate(180deg);
+}
+@media (max-width: 1024px) {
+  .form .icon--arrow {
+    right: 0;
+    top: 0;
+    width: 6rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 1024px) {
+  .form .icon--arrow svg {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+.form .icon--arrow.active {
+  transform: rotate(0deg);
+}
+.form__input-container--checbox {
+  display: flex;
+  align-items: flex-end;
+}
+@media (max-width: 1024px) {
+  .form__input-container--checbox {
+    align-items: flex-start;
+  }
+}
+.form__input-container--checbox input[type=checkbox] {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 2rem;
+  height: 2rem;
+  z-index: 3;
+  padding: 0;
+}
+.form__input-container--checbox p {
+  font-family: "Hind", sans-serif;
+  font-weight: 300;
+  font-size: 1.8rem;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #8b96ac;
+}
+.form__input-container--checbox p a {
+  text-decoration: underline;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  color: #5b6c8c;
+}
+.form__input-container--checbox .error-message {
+  font-family: "Proxima Nova", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 160%;
+  color: #ba5b5b;
+  position: absolute;
+  bottom: -2.4rem;
+}
+.form__input-container--checbox span {
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+  display: block;
+}
+.form__input-container--checbox span {
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+  display: block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../img/icons/Checkbox=Off.svg");
+}
+.form__input-container--checbox input[type=checkbox]:checked + span {
+  background-image: url("../img/icons/Checkbox=on.svg");
+}
+.form__button-submit {
+  font-family: "Overpass", sans-serif;
+  font-weight: 600;
+  font-size: 2.8rem;
+  line-height: 80%;
+  display: inline;
+  color: #2a3b53;
+  background: #fff;
+  border: none;
+  cursor: pointer;
+  position: relative;
+}
+@media (max-width: 1024px) {
+  .form__button-submit {
+    margin-left: auto;
+    padding: 0;
+  }
+}
+.form__button-submit.active, .form__button-submit.finished {
+  pointer-events: none; /* Заборонити взаємодію з кнопкою */
+  opacity: 0.5;
+}
+.form__button-submit.active::before {
+  content: "";
+  background-image: url("../img/icons/circle.svg");
+  height: 4rem;
+  width: 4rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  left: -4rem;
+}
+.form__button-submit.finished::before {
+  background-image: url("../img/icons/check-solid.svg");
+  content: "";
+  height: 2rem;
+  width: 2rem;
+  /* font-size: 2rem; */
+  top: 50%;
+  transform: translateY(-50%);
+  background-position: center;
+  background-size: cover;
+  pointer-events: none; /* Заборонити взаємодію з кнопкою */
+  opacity: 0.5;
+  position: absolute;
+  left: -3rem;
+}
+.form__button-submit::after {
+  content: "";
+  height: 0.2rem;
+  left: 0;
+  right: 0;
+  background-color: #5879ef;
+  position: absolute;
+  bottom: 0;
+  border-radius: 100rem;
+}
+.form__input-wrapper--password {
+  position: relative;
+}
+.form__pass-icon {
+  position: absolute;
+  right: 2rem;
+  top: 1.7rem;
+  text-align: right;
+  border: none;
+  background-color: transparent;
+}
+@media (max-width: 1024px) {
+  .form__pass-icon {
+    top: 1rem;
+    width: 3rem;
+    height: 3rem;
+  }
+}
+.form__pass-icon img {
+  cursor: pointer;
+  opacity: 0.6;
+}
+@media (max-width: 1024px) {
+  .form__pass-icon img {
+    height: 100%;
+    width: 100%;
+  }
+}
+.form__input--password:focus + p + .form__pass-icon img {
+  opacity: 1;
+}
+
+.select {
+  position: relative;
+}
+
+.city-select {
+  position: absolute;
+  display: none;
+  top: 99%;
+  width: 100%;
+  border: 0.1rem solid #5b6c8c;
+  background-color: #fff;
+  min-height: 6.2rem;
+  overflow-y: auto;
+  z-index: 1;
+}
+.city-select span {
+  font-family: "Hind", sans-serif;
+  display: block;
+  padding: 1.2rem 2rem;
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #2a3b53;
+}
+@media (max-width: 1024px) {
+  .city-select span {
+    padding: 0.8rem 1rem;
+    font-weight: 400;
+    font-size: 1.8rem;
+  }
+}
+.city-select span:hover {
+  background-color: #f0f0f0;
+  cursor: pointer;
+}

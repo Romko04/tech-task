@@ -1,0 +1,662 @@
+/*Обнулення*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    line-height: 1;
+    height: 100vh;
+    font-family: 'Unbounded', cursive;
+    background-color: #fff;
+}
+
+
+$sec-text: #8b96ac;
+$error: #ba5b5b;
+$main-text: #2a3b53;
+$field-stroke: #5b6c8c;
+$background: #f7f9fd;
+$blue: #5879ef;
+$head-color: #3e5679;
+
+$font-family: "Hind", sans-serif;
+$second-family: "Overpass", sans-serif;
+$third-family: "Proxima Nova", sans-serif;
+
+
+
+
+.wrapper {
+    position: relative;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex: 1 1 auto;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+:focus {
+    outline: 0;
+}
+
+ins {
+    text-decoration: none;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+@font-face {
+    font-family: 'Hind';
+    font-weight: 400;
+    font-style: normal;
+    src: url('../fonts/Hind-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Hind';
+    font-weight: 400;
+    font-style: normal;
+    src: url('../fonts/Hind-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Hind';
+    font-weight: 400;
+    font-style: normal;
+    src: url('../fonts/Hind-Regular.otf') format('otf');
+}
+
+
+
+
+@font-face {
+    font-family: 'Proxima Nova';
+    font-weight: 400;
+    font-style: normal;
+    src: url('../fonts/Proxima-NovaRegular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Proxima Nova';
+    font-weight: 400;
+    font-style: normal;
+    src: url('../fonts/Proxima-NovaRegular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Proxima Nova';
+    font-weight: 400;
+    font-style: normal;
+    src: url('../fonts/Proxima-NovaRegular.otf') format('otf');
+}
+
+
+
+@font-face {
+    font-family: 'Overpass';
+    font-weight: 600;
+    font-style: normal;
+    src: url('../fonts/Overpass-SemiBold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Overpass';
+    font-weight: 600;
+    font-style: normal;
+    src: url('../fonts/Overpass-SemiBold.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Overpass';
+    font-weight: 600;
+    font-style: normal;
+    src: url('../fonts/Overpass-SemiBold.otf') format('otf');
+}
+
+
+
+@font-face {
+    font-family: 'Hind';
+    font-weight: 300;
+    font-style: normal;
+    src: url('../fonts/Hind-Light.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Hind';
+    font-weight: 300;
+    font-style: normal;
+    src: url('../fonts/Hind-Light.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Hind';
+    font-weight: 300;
+    font-style: normal;
+    src: url('../fonts/Hind-Light.otf') format('otf');
+}
+
+
+
+@font-face {
+    font-family: 'Overpass';
+    font-weight: 700;
+    font-style: normal;
+    src: url('../fonts/Overpass-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Overpass';
+    font-weight: 700;
+    font-style: normal;
+    src: url('../fonts/Overpass-Bold.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Overpass';
+    font-weight: 700;
+    font-style: normal;
+    src: url('../fonts/Overpass-Bold.otf') format('otf');
+}
+
+
+
+
+body {
+    font-family: $font-family;
+    line-height: 1;
+    height: 100vh;
+}
+
+html {
+    font-size: unquote("calc(100vw / 1920 * 10)");
+
+    @media (max-width: 1024px) {
+        font-size: unquote("calc(100vw / 360 * 10)");
+    }
+}
+
+
+
+
+
+.container {
+    max-width: 192rem;
+
+    padding: 8rem;
+    @media (max-width: 1024px) {
+        padding: 1.5rem;
+    }
+    position: relative;
+    z-index: 2;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.erorr-span{
+    font-family: $third-family;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 160%;
+    color: $error;
+}
+
+
+
+
+
+.form {
+    &__wrapper-title {
+        font-family: $second-family;
+        font-weight: 700;
+        font-size: 9.6rem;
+        max-width: 101rem;
+        line-height: 110%;
+        color: $sec-text;
+        @media (max-width: 1024px) {
+            font-size: 3.6rem;
+        }
+        
+        span {
+            color: $main-text
+        }
+    }
+
+    &__wrapper-subtitle {
+        font-family: $font-family;
+        font-weight: 400;
+        font-size: 2.4rem;
+        line-height: 100%;
+        color: $sec-text;
+        @media (max-width: 1024px) {
+            font-size: 2rem;
+        }
+        
+    }
+
+    &__wrapper {
+        text-align: left;
+    }
+
+    form {
+        margin-top: 4rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        width: 56rem;
+        @media (max-width: 1024px) {
+            width: 100%;
+            gap: 1rem;
+        }
+    }
+
+    &__input {
+        border: transparent;
+        // border-bottom: 0.1rem solid $field-stroke;
+        position: relative;
+        -webkit-appearance: none;
+        border-radius: 0;
+        padding: 1.2rem 7rem 1.2rem 2rem;
+        width: 100%;
+        font-family: $font-family;
+        font-weight: 400;
+        font-size: 2.4rem;
+        line-height: 150%;
+        letter-spacing: 0.04em;
+        color: $main-text;
+        @media (max-width: 1024px) {
+            padding: 1rem 7rem 1rem 2rem;
+            font-size: 2rem;
+        }
+
+        ::placeholder {
+            font-family: $font-family;
+            font-weight: 400;
+            font-size: 2.4rem;
+            line-height: 150%;
+            letter-spacing: 0.04em;
+            color: $sec-text;
+        }
+    }
+
+    &__input-container::after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: .1rem;
+        background-color: $field-stroke;
+      }
+
+    &__input-container.error-input::after{
+        background-color: $error;
+    }
+
+    &__input-container{
+        position: relative;
+    }
+
+    &__input-wrapper {
+        width: 56rem;
+        @media (max-width: 1024px) {
+            width: 100%;
+        }
+
+        p {
+            font-family: $third-family;
+            font-weight: 400;
+            font-size: 1.6rem;
+            line-height: 160%;
+            color: $error;
+        }
+        input[type="password"]::-ms-reveal,
+        input[type="password"]::-webkit-credentials-auto-fill-button,
+        input[type="password"]::-webkit-reveal {
+        display: none;
+        }
+
+    }
+
+    &__input-wrapper--checbox {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        @media (max-width: 1024px) {
+            flex-direction: column;
+            gap: 2rem;
+
+        }
+    }
+
+    &__input--checbox {
+        display: inline-block;
+    }
+
+    .icon--arrow {
+        position: absolute;
+        right: 2rem;
+        top: 1.7rem;
+        cursor: pointer;
+        transition: all .2s ease;
+        transform:  rotate(180deg);
+        @media (max-width: 1024px) {
+            right: 0;
+            top: 0;
+            width: 6rem;
+            height: 5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        svg {
+            @media (max-width: 1024px) {
+                width: 2.5rem;
+                height: 2.5rem;
+            }
+        }
+    }
+
+    .icon--arrow.active {
+        transform:rotate(0deg);
+    }
+
+    &__input-container--checbox {
+        display: flex;
+        align-items: flex-end;
+         @media (max-width: 1024px) {
+            align-items: flex-start;
+            }
+        input[type="checkbox"] {
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            left: 0;
+            width: 2rem;
+            height: 2rem;
+            z-index: 3;
+            padding: 0;
+        }
+
+        p {
+            font-family: $font-family;
+            font-weight: 300;
+            font-size: 1.8rem;
+            line-height: 150%;
+            letter-spacing: 0.04em;
+            color: $sec-text;
+            a {
+                text-decoration: underline;
+                text-decoration-skip-ink: none;
+                color: $field-stroke;
+            }
+        }
+
+        .error-message {
+            font-family: $third-family;
+            font-weight: 400;
+            font-size: 1.6rem;
+            line-height: 160%;
+            color: $error;
+            position: absolute;
+            bottom: -2.4rem;
+        }
+
+        span {
+            position: relative;
+            width: 3rem;
+            height: 3rem;
+            display: block;
+        }
+
+        span {
+            position: relative;
+            width: 3rem;
+            height: 3rem;
+            display: block;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url('../img/icons/Checkbox=Off.svg'); // Зображення чекбокса за замовчуванням
+        }
+        
+
+        input[type="checkbox"]:checked+span {
+            background-image: url('../img/icons/Checkbox=on.svg'); // Зображення чекбокса, коли обраний
+        }
+    }
+
+    &__button-submit {
+        font-family: $second-family;
+        font-weight: 600;
+        font-size: 2.8rem;
+        line-height: 80%;
+        display: inline;
+        color: $main-text;
+        background: #fff;
+        border: none;
+        cursor: pointer;
+        position: relative;
+        @media (max-width: 1024px) {
+            margin-left: auto;
+            padding: 0;
+        }
+    }
+    &__button-submit.active,&__button-submit.finished{
+        pointer-events: none; /* Заборонити взаємодію з кнопкою */
+        opacity: 0.5;
+    }
+    
+    &__button-submit.active::before {
+        content: '';
+        background-image: url('../img/icons/circle.svg');
+        height: 4rem;
+        width: 4rem;
+        top: 50%;
+        transform: translateY(-50%);
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+        left: -4rem;
+    }
+    &__button-submit.finished::before {
+        background-image: url('../img/icons/check-solid.svg');
+    content: "";
+    height: 2rem;
+    width: 2rem;
+    /* font-size: 2rem; */
+    top: 50%;
+    transform: translateY(-50%);
+    background-position: center;
+    background-size: cover;
+    pointer-events: none; /* Заборонити взаємодію з кнопкою */
+    opacity: 0.5;
+    position: absolute;
+    left: -3rem;
+    }
+
+    &__button-submit::after {
+        content: '';
+        height: .2rem;
+        left: 0;
+        right: 0;
+        background-color: $blue;
+        position: absolute;
+        bottom: 0;
+        border-radius: 100rem;
+    }
+
+    &__input-wrapper--password {
+        position: relative;
+    }
+
+    &__pass-icon {
+        position: absolute;
+        right: 2rem;
+        top: 1.7rem;
+        // transform: translateY(-50%);
+        text-align: right;
+        border: none;
+        background-color: transparent;
+        @media (max-width: 1024px) {
+            top: 1rem;
+            width: 3rem;
+            height: 3rem;
+        }
+        
+        img {
+            @media (max-width: 1024px) {
+                height: 100%;
+                width: 100%;
+            }
+            cursor: pointer;
+            opacity: .6;
+        }
+    }
+
+    &__input--password:focus+p+&__pass-icon img {
+        opacity: 1;
+    }
+
+}
+
+
+
+.select {
+    position: relative;
+}
+
+.city-select {
+    position: absolute;
+    display: none;
+    top: 99%;
+    width: 100%;
+    border: 0.1rem solid $field-stroke;
+    background-color: #fff;
+    min-height: 6.2rem;
+    overflow-y: auto;
+    z-index: 1;
+
+    span {
+        font-family: $font-family;
+        display: block;
+        padding: 1.2rem 2rem;
+        font-weight: 400;
+        font-size: 2.4rem;
+        line-height: 150%;
+        letter-spacing: 0.04em;
+        color: $main-text;
+        @media (max-width: 1024px) {
+            padding: 0.8rem 1rem;
+        font-weight: 400;
+        font-size: 1.8rem;
+        }
+    }
+
+    span:hover {
+        background-color: #f0f0f0;
+        cursor: pointer;
+    }
+}
+
+

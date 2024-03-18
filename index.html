@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texh-task</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <section class="form">
+                <div class="form__wrapper">
+                    <h1 class="form__wrapper-title">
+                        Reach Out and <span>Connect</span> With Us
+                    </h1>
+                    <p class="form__wrapper-subtitle">
+                        Bridging Your Ideas with Our Expertise
+                    </p>
+                    <form>
+                        <div class="form__input-wrapper">
+                            <div class="form__input-container">
+                                <input name="Name" placeholder="Name *" type="text"
+                                    class="form__input form__input--name ">
+                            </div>
+                            <p></p>
+                        </div>
+                        <div class="form__input-wrapper">
+                            <div class="form__input-container">
+                                <input name="Gmail" placeholder="E-mail *" type="email"
+                                    class="form__input form__input--email">
+                            </div>
+                            <p></p>
+                        </div>
+                        <div class="form__input-wrapper">
+                            <div class="form__input-container">
+                                <input name="Phone" placeholder="Phone *" id="tel-mask"
+                                    class="form__input form__input--phone">
+                            </div>
+                            <p></p>
+                        </div>
+                        <div class="form__input-wrapper form__input-wrapper--password">
+                            <div class="form__input-container">
+                                <input name="Password" placeholder="Password *" type="password"
+                                    class="form__input form__input--password">
+                            </div>
+                            <p></p>
+                            <div class="form__pass-icon">
+                                <img src="./img/icons/passwordOff.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="form__input-wrapper">
+                            <div class="select">
+                                <div class="form__input-container">
+                                    <input name="Checkbox" placeholder="Choise your city *" type="text" class="form__input form__input--select ">
+                                    <div class="city-select">
+                                        <span data-value="New York">New York</span>
+                                        <span data-value="Los Angeles">Los Angeles</span>
+                                        <span data-value="Chicago">Chicago</span>
+                                    </div>
+                                </div>
+                                <p></p>
+                                <div class="icon--arrow">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M14.7762 11.3314L14.3176 11.7781C14.1733 11.9176 13.9813 11.9945 13.7761 11.9945C13.571 11.9945 13.3787 11.9176 13.2344 11.7781L8.00313 6.71692L2.76584 11.7837C2.62174 11.9232 2.42949 12 2.22438 12C2.01928 12 1.82692 11.9232 1.6827 11.7837L1.224 11.3397C0.925333 11.051 0.925333 10.5807 1.224 10.292L7.45963 4.23763C7.60373 4.09823 7.79575 4 8.00267 4H8.00506C8.21029 4 8.4023 4.09834 8.5464 4.23763L14.7762 10.2756C14.9206 10.415 14.9998 10.6064 15 10.8048C15 11.0033 14.9206 11.1921 14.7762 11.3314Z"
+                                            fill="#2A3B53" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__input-wrapper form__input-wrapper--checbox">
+                            <div class="form__input-container--checbox">
+                                <input name="" type="checkbox" class="form__input form__input--checbox">
+                                <span></span>
+                                <p>I have read and accepted <a href="">privacy policy</a></p>
+                            </div>
+                            <button class="form__button-submit" type="submit">Submit</button>
+                        </div>
+                        <span class="erorr-span"></span>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script defer src="./js/mask.js"></script>
+    <script defer src="./js/index.js"></script>
+</body>
+
+</html>
